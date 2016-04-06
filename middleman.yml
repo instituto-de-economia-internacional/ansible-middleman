@@ -1,0 +1,15 @@
+---
+- hosts: middleman
+  sudo: yes
+  gather_facts: true # https://github.com/zzet/ansible-rbenv-role/issues/37
+  vars:
+    ansible_install_version: 2.0.1.0
+    rbenv:
+      env: user
+      ruby_version: 2.3.0
+  roles:
+    - role: dwcramer.ansible
+    - role: zzet.rbenv
+      rbenv_users:
+        - vagrant
+
