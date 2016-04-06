@@ -13,4 +13,5 @@
     - role: zzet.rbenv
       rbenv_users:
       - vagrant
+    - role: bundler
 
